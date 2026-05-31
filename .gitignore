@@ -1,0 +1,6 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+*.swp
+*.swo
+privacy-policy-self-service-generator-mvp.zip
