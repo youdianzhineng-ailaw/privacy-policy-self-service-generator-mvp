@@ -144,8 +144,8 @@ Skill 会按 MVP / 最小合规版本处理，并根据产品情况收集必要�
 
 - 个人微信：`xiarenzhimajuan`
 
-![个人微信二维码](assets/wechat-xiarenzhimajuan.jpg)
+<img alt="个人微信二维码" src="assets/wechat-xiarenzhimajuan.jpg" width="244">
 
 也欢迎关注「有点智能事务所」。我会在这里持续更新新的 Skill 发布、AI 合规实践、隐私协议和数据合规相关内容。
 
-![有点智能事务所二维码](assets/youdian-zhineng-shiwusuo-qrcode.jpg)
+<img alt="有点智能事务所二维码" src="assets/youdian-zhineng-shiwusuo-qrcode.jpg" width="261">
