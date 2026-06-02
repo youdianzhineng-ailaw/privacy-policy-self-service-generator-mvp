@@ -5,6 +5,8 @@ description: MVP 级中文隐私协议自助生成器，基于中国数据安全
 
 # MVP 隐私协议自助生成器
 
+当前版本：`v1.1.1`。
+
 本 skill 只生成 **MVP / 最小合规版本** 隐私协议。它的目标不是生成大而全的正式深度协议，而是在产品上线前，用尽量短的正文、必要表格和复查报告，帮助用户先把个人信息处理者、产品范围、个人信息类型、第三方或 SDK、存储与跨境、用户权利、AI 或高风险事项等基础问题说清楚。
 
 整体流程以合规、保留和可迭代为优先：确认按 MVP 模式处理，收集产品事实，先校验核心缺口，再基于已确认事实生成最小合规版本，最后复查和运行质量门禁。
@@ -47,6 +49,7 @@ MVP 版本不是低标准版本。缺少个人信息处理者身份、联系方�
    - 如果用户上传同领域隐私协议或提供竞品链接，先读取 `references/benchmark-policy-learning.md`，再使用样本。
    - 读取 `references/disclaimer-requirements.md` 和 `templates/disclaimer-template.md`，准备输出用的生成说明与免责声明。
    - 读取 `references/legal-basis-boundaries.md`，区分法律、行政法规、部门规章、国家标准、指南、平台规则和监管实践；不确定的依据标记为“需进一步核验”。
+   - 复查报告中需要确认法律法规、监管规则、国家标准、条文编号、效力层级或适用范围时，读取 `references/yuandian-mcp-legal-lookup.md`，在元典 MCP 可用时优先检索；工具不可用或依据无法确认时，标记为“需进一步核验”，不得编造条文。
    - 如果涉及 App、移动智能终端、小程序权限、移动端 SDK 或终端敏感行为，读取 `references/app-processing-method-errors.md`，用于识别个人信息处理方式错误、高风险处理方式及对应依据。
    - 如果产品有多个端或渠道，读取 `references/platform-channel-requirements.md`，按 App、H5、网站、小程序、SaaS、管理端等分别核对 MVP 版本不能省略的披露项。
    - 如果产品包含微信小程序或其他小程序渠道，读取 `references/mini-program-privacy-guide.md`，只使用其中的小程序字段、最小范围和复查口径，不复制微信小程序平台指引的文案结构或示例话术。
@@ -86,6 +89,7 @@ MVP 版本不是低标准版本。缺少个人信息处理者身份、联系方�
    - 检查输出是否包含 `references/disclaimer-requirements.md` 要求的免责声明。
    - 重点复查敏感个人信息、未成年人、自动化决策、AI 训练、SDK、共享、转让、公开披露、委托处理、跨境传输、保存期限和权利响应路径。
    - 对个人信息处理方式错误或高风险的事项，必须在复查报告中给出提醒、解释和依据，依据应区分法律依据、监管规则参考和国家标准参考。
+   - 复查报告需要引用或确认具体法律法规、条文、效力状态、发布机关或适用范围时，应按 `references/yuandian-mcp-legal-lookup.md` 的要求使用元典 MCP 检索并记录结果；未完成检索或无法确认时，写明原因并标记“需进一步核验”。
    - 需要法律复查时，可附加《个人信息保护法》《数据安全法》《网络安全法》相关维度辅助检查表，重点判断产品事实是否遗漏关键合规维度。
    - 在确认隐私协议要求覆盖完整前，运行 `scripts/privacy_requirements_gate.py --validate <requirements-matrix>`。这是硬性合规门禁。
    - 只有已经生成三法辅助检查表时，才运行 `scripts/legal_matrix.py --validate <matrix-file>` 做结构校验；不得把三法矩阵作为所有 MVP 任务的默认交付物。
@@ -147,6 +151,7 @@ MVP 版本不是低标准版本。缺少个人信息处理者身份、联系方�
 - `references/benchmark-policy-learning.md`：学习用户上传的同领域隐私协议和公开样本时的使用规则。
 - `references/disclaimer-requirements.md`：生成内容免责声明要求，规定仅供参考、不构成正式法律意见和正式使用前咨询专业人士的提示。
 - `references/legal-basis-boundaries.md`：法律依据层级和适用边界，用于区分法律、行政法规、部门规章、国家标准、指南、平台规则和监管实践。
+- `references/yuandian-mcp-legal-lookup.md`：复查报告中的法律法规检索要求，用于在需要确认依据时调用元典 MCP 并记录核验结果。
 - `references/app-processing-method-errors.md`：App 和移动端个人信息处理方式错误提醒规则，用于说明错误处理方式、原因解释、修正方向和法律或标准依据。
 - `references/platform-channel-requirements.md`：多端渠道隐私要求参考，用于区分 App、H5、网站、小程序、SaaS、管理端、开放平台和 SDK 的 MVP 最小披露项。
 - `references/mini-program-privacy-guide.md`：小程序渠道隐私保护指引参考，用于选取最小披露范围、接口字段和复查点，禁止复制微信小程序同款表达。
