@@ -31,6 +31,7 @@ REQUIRED_SKILL_FILES = [
     "references/benchmark-policy-learning.md",
     "references/disclaimer-requirements.md",
     "references/legal-basis-boundaries.md",
+    "references/yuandian-mcp-legal-lookup.md",
     "references/app-processing-method-errors.md",
     "references/platform-channel-requirements.md",
     "references/mini-program-privacy-guide.md",
