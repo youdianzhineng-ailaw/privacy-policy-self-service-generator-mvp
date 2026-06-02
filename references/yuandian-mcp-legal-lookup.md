@@ -16,7 +16,9 @@
 
 ## MCP 配置参考
 
-如当前环境已配置元典 MCP，可使用其检索法律法规。配置示例：
+如当前环境已配置元典 MCP，可使用其检索法律法规。配置地址：[https://open.chineselaw.com/mcp-config](https://open.chineselaw.com/mcp-config)。
+
+配置示例：
 
 ```json
 {
